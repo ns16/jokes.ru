@@ -6,14 +6,14 @@
  *
  * @link http://kohanaframework.org/guide/about.install#application
  */
-$application = 'application';
+$application = '../application';
 
 /**
  * The directory in which your modules are located.
  *
  * @link http://kohanaframework.org/guide/about.install#modules
  */
-$modules = 'modules';
+$modules = '../modules';
 
 /**
  * The directory in which the Kohana resources are located. The system
@@ -21,7 +21,7 @@ $modules = 'modules';
  *
  * @link http://kohanaframework.org/guide/about.install#system
  */
-$system = 'system';
+$system = '../system';
 
 /**
  * The default extension of resource files. If you change this, all resources
@@ -44,7 +44,7 @@ define('EXT', '.php');
  * When using a legacy application with PHP >= 5.3, it is recommended to disable
  * deprecated notices. Disable with: E_ALL & ~E_DEPRECATED
  */
-error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL & ~E_DEPRECATED);
 
 /**
  * End of standard configuration! Changing any of the code below should only be
