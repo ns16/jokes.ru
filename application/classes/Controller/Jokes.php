@@ -12,9 +12,11 @@ class Controller_Jokes extends Controller_Template {
             ->limit($pageSize)
             ->find_all();
 
+        $jokesCount = ORM::factory('joke')->count_all();
+
         $pagination = Pagination::factory(
             array(
-                'total_items' => 105
+                'total_items' => $jokesCount
             )
         );
 
